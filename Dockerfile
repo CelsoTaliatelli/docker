@@ -1,7 +1,7 @@
-FROM nginx:latest
+FROM ubuntu:latest
 
-WORKDIR /app 
-
-RUN apt-get update && \ 
-    apt-get install vim -y
-COPY html/ /usr/share/nginx/html
+#Comando fixo
+ENTRYPOINT [ "echo", "Hello" ]
+#CMD [ "echo", "World" ]
+#Comando variavel que entra como parametro do entrypoint
+CMD [ "Celso" ]
